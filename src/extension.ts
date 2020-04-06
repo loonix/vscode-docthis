@@ -9,7 +9,8 @@ const languages = [
     "typescript",
     "vue",
     "javascriptreact",
-    "typescriptreact"
+    "typescriptreact",
+    "dart"
 ];
 
 let documenter: Documenter;
@@ -27,7 +28,7 @@ function languageIsSupported(document: vs.TextDocument) {
 
 function verifyLanguageSupport(document: vs.TextDocument, commandName: string) {
     if (!languageIsSupported(document)) {
-        vs.window.showWarningMessage(`Sorry! '${commandName}' currently only supports JavaScript and TypeScript.`);
+        vs.window.showWarningMessage(`Sorry! '${commandName}' currently only supports JavaScript, TypeScript and Dart.`);
         return false;
     }
 
